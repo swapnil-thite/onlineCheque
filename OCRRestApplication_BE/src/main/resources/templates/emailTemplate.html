@@ -1,0 +1,62 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="UTF-8">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+	integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+	integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+	crossorigin="anonymous">
+
+</head>
+<body style="font-family: sans-serif">
+	<div style="">
+		<div
+			style="background-color: #fff; height: 594px; width: 500px; border: 5px solid lightgray">
+			<!-- <div style="text-align: center; padding-top: 18px">
+				<img
+					blockedImageSrc="https://pbs.twimg.com/profile_images/874996574811770880/-p-n0XEA_400x400.jpg"
+					alt="" width="70" height="73">
+			</div> -->
+			<div
+				style="background-color: #fff;text-align: center">
+				<p style="color: #000000; font-size: 46px" align="" >
+					<span style="font-family:sans-serif;" >XYZ Bank Limited</span>
+				</p>
+			</div>
+			<div
+				style="width: 490px; height: 145px; background-color: #000; padding-top: 15px; text-align: center">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #258900;height: 100px;width: 100px;"><path d="M21.856 10.303c.086.554.144 1.118.144 1.697 0 6.075-4.925 11-11 11s-11-4.925-11-11 4.925-11 11-11c2.347 0 4.518.741 6.304 1.993l-1.422 1.457c-1.408-.913-3.082-1.45-4.882-1.45-4.962 0-9 4.038-9 9s4.038 9 9 9c4.894 0 8.879-3.928 8.99-8.795l1.866-1.902zm-.952-8.136l-9.404 9.639-3.843-3.614-3.095 3.098 6.938 6.71 12.5-12.737-3.096-3.096z"/></svg>
+				<p style="color: #fff; font-size: 14px">
+					<span>Verify Your Issued Cheque Information</span>
+				</p>
+			</div>
+			<div style="font-size: 14px">
+				<p style="margin-left: 13px"><h4>Account Information</h4></p>
+				<p style="margin-left: 13px">Name : <span th:text="${bankUser}"></span></p>
+				<p style="margin-left: 13px">A/c No. : <span th:text="${accNo}"></span></p>
+				<p style="margin-left: 13px">Issued Cheque No. : <span th:text="${chequeNo}"></span></p>
+				<p style="margin-left: 13px">Amount : Rs. <span  th:text="${amount}"></span></p>
+				<!-- <p style="margin-left: 13px">
+					Account <span style="margin-left: 36px">to</span>
+					<span th:text="${bankUser}"></span>
+				</p> -->
+			</div>
+			<div
+				style="text-align: center; padding-top: 15px; padding-bottom: 9px">
+				<span class="mr-8"><button class="btn btn-success" th:href="@{approve}" type="button">Verify</button></span>
+		        <span class="ml-5"><button class="btn btn-danger" th:href="@{disapprove}" type="button">Deny</button></span>
+		        
+			</div>
+			<div
+				style="background-color: gray; width: 500px; height: 59px; margin-top: 6px; padding-top: 20px; font-size: 13px; color: #fff">
+				<span>By Clicking on the Verify button you agree to the Banks terms and conditions and from now your respective issued hardcopy cheque will not be valid.</span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
